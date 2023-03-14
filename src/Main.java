@@ -7,10 +7,10 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
         System.out.print("Ange ditt namn (efternamn, förnamn): ");
-        String fullName = input.nextLine();
+        String lastName = input.next();
+        lastName = lastName.substring(0, lastName.length()-1);
+        String firstName = input.next();
 
-        int indexOfComma = fullName.indexOf(',');
-        String firstName = fullName.substring(indexOfComma + 2);
-
-        System.out.println("Hej " + firstName.toUpperCase());    }
+        System.out.println("Hej " + firstName.toUpperCase());
+    }
 }
